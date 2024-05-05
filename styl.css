@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/*
+## Colors
+
+### Neutral
+
+- Almost White: hsl(0, 0%, 98%)
+- Medium Gray: hsl(0, 0%, 41%)
+- Almost Black: hsl(0, 0%, 8%)
+
+*/
+
+:root{
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%); 
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Epilogue", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--Almost-White);
+    .shadow{
+        display: none;
+    }
+    main{
+        width: 90%;
+        margin: auto;
+        nav{
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            
+            height: 60px;
+            padding: 40px 0;
+            #menu{
+                opacity: 0;
+                
+            }
+          
+            .right{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex: 1;
+                #close{
+                    display: none;
+                }
+
+                
+                .main-ul{
+                    display: flex;
+                    list-style: none;
+                    margin-left: 50px;
+                    position: relative;
+
+                    .feature,.company{
+                        display: flex;
+                        align-items: center;
+                        gap: 3px;
+                    }
+                    ul{
+                        position: absolute;
+                        background-color: white;
+                        padding: 5px 10px;
+                        list-style: none;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px #00000038  ;
+                    }
+                    #more-features{
+                        position: absolute;
+                        top: 25px;
+                        left: -60px;
+                        padding: 10px 20px;
+                        li{
+                            display: flex;
+                            margin: 11px 0;
+                            img{
+                                margin-right: 10px;
+                                width: 14px;
+                                height: 14px;
+                            }
+                            a{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    #company-info{
+                        position: absolute;
+                        top: 30px;
+                        left: 100px;
+                        li{
+                            padding: 2px 1px;
+                            margin: 8px 7px;
+                            a{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    li{
+                        margin-left: 15px;
+                        a{
+                            text-decoration: none;
+                            color: var(--Medium-Gray);
+                            font-size: 14px;
+                        }
+                        a:hover{
+                            color: var(--Almost-Black);
+                        }
+                    }
+                }
+                .log-in{
+                    a{
+                        text-decoration: none;
+                        margin: 0 40px;
+                        color: var(--Medium-Gray);
+                    }
+                    a:hover{
+                        color: var(--Almost-Black);
+                    }
+                    span{
+                        padding: 10px 20px;
+                        border: 1px solid var(--Medium-Gray);
+                        border-radius: 10px;
+                        color: var(--Medium-Gray);
+                        cursor: pointer;
+                    }
+                    span:hover{
+                        border: 1px solid var(--Almost-Black);
+                        color: var(--Almost-Black);
+                    }
+                }
+          
+            }
+           
+          
+            
+
+        }
+
+        .container{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+          
+         
+            gap: 100px;
+            .content{
+                flex: 1;
+                height: 450px;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: space-between;
+                h1{
+                    font-size: 65px;
+                    font-weight: 700;
+                    line-height: 70px;
+                    margin-top: 50px;
+                    color: var(--Almost-Black);
+                   
+                }
+                p{
+                    width: 390px;
+                    line-height: 24px;
+                    font-weight: 500;
+                    color: var(--Medium-Gray);
+                    margin-top: -30px;
+                  
+                }
+                #btn-2{
+                    width: 120px;
+                    margin-top: -40px;
+                    padding:15px 15px;
+                    border-radius: 15px;
+                    border: none;
+                    background-color: var(--Almost-Black);
+                    color: white;
+                    font-weight: 700;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+                #btn-2:hover{
+                    background-color: transparent;
+                    border: 1px solid var(--Almost-Black);
+                    color: var(--Almost-Black);
+                }
+
+                .comps{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    img{
+                        width: 80px;
+                    }
+                }
+            }
+            picture{
+                flex: 1;
+                height: 450px;
+                direction: rtl;
+                img{
+                   width: 380px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:550px) {
+    body{
+        height: 100vh;
+        position: relative;
+       width: 100%;
+        .shadow{
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: -225px;
+            background-color: #332e2e46;
+            display: none;
+        }
+        main{
+           
+            width: 100%;
+           
+            nav{
+                height: 40px;
+                margin: 0;
+                padding-top: 15px;
+                #menu{
+                    margin-right: 20px;
+                    cursor: pointer;
+                    display: block;
+                    opacity: 1;
+                }
+                .logo{
+                    width: 80px;
+                    margin-left: 10px;
+                }
+               .right{
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100vh;
+                background-color: white;
+                width: 250px;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                padding-top: 50px;
+                z-index: 11;
+                
+               display: none;
+                #close{
+                    display: block;
+                    position: absolute;
+                    right: 10px;
+                    top: 20px;
+                    cursor: pointer;
+                }
+                .main-ul{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    position: relative;
+                    #more-features{
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        box-shadow: 0 0 0 0;
+                    }
+                    #company-info{
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        box-shadow: 0 0 0 0;
+                    }
+                    li{
+                        margin: 10px 0;
+                    }
+                }
+                .log-in{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    width: 80%;
+                    margin-left: 25px;
+                    text-align: center;
+                    a{
+                        margin: 15px 0;
+                    }
+                
+                }
+               }
+             }
+             .container{
+                 display: flex;
+                 flex-direction: column-reverse;
+                 align-items: center;
+                
+                 position: relative;
+                 top: -20px;
+                 height: 80%;
+                 width: 100%;
+                 margin: auto;
+                 picture{
+                    width: 100%;
+                    
+                    img{
+                        width: 100%;
+                    }
+                 }
+                 .content{
+                    text-align: center;
+                    margin: 0;
+                    position: relative;
+                    top: -90px;
+                    h1{
+                        font-size: 32px;
+                        margin: 20px 0;
+                    }
+                    p{
+                        width: 350px;
+                        margin-bottom: 20px;
+                    }
+                    #btn-2{
+                        position: relative;
+                        left: 50%;
+                        top: 65px;
+                        transform: translate(-50%,-50%);
+                    }
+                    .comps{
+                        margin-top: 90px;
+                        img{
+                            width: 50px;
+                        }
+                    }
+                 }
+                 
+             }
+        }
+       
+    }
+}
